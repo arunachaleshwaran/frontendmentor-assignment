@@ -1,0 +1,196 @@
+:root{
+    --veryLightGrayishBlue:hsl(240, 78%, 98%);
+    --LightGrayishBlue:hsl(234, 14%, 74%);
+    --grayishBlue:hsl(233, 13%, 49%);
+    --darkGrayishBlue:hsl(232, 13%, 33%);
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--veryLightGrayishBlue);
+    background-image: url("../images/bg-top.svg");
+    background-repeat: no-repeat;
+    background-position-x: 200px;
+    background-position-y: -40px;
+    background-size: contain;
+}
+header{
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+main{
+    margin-bottom: 1.5rem;
+}
+.button-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    color:var(--grayishBlue);
+    text-align: center;
+}
+.duration{
+    color: var(--LightGrayishBlue);
+    font-size: 15px;
+}
+.duration-button{
+    border: none;
+    background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border-radius: 15px;
+    width: 45px;
+    height: 25px;
+    margin: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0;
+}
+.button-node{
+    background-color: var(--veryLightGrayishBlue);
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    margin: 0 4px;
+}
+.plan{
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    width: 270px;
+    padding: 1.5rem 1.2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 10px 1px var(--LightGrayishBlue);
+}
+.plan p:not(:first-child){
+    color: var(--grayishBlue);
+    border-bottom: 1px solid var(--LightGrayishBlue);
+    padding-bottom: 1rem;
+    font-size: .8rem;
+}
+.plan p:first-child{
+    color: var(--darkGrayishBlue);
+    font-size: .8rem;
+    margin: 0;
+    margin-bottom: .5rem;
+}
+.plan h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    border-bottom: 1px solid var(--LightGrayishBlue);
+}
+.dollar-sign{
+    font-size: 1.5rem;
+    padding-right: .3rem;
+}
+.plan button{
+    margin-top:.5rem;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    border: none;
+    padding: .6rem 0;
+    font-size: .6rem;
+    letter-spacing: 1px;
+    background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+.plan-prof{
+    background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    text-align: center;
+    border-radius: 10px;
+    width: 270px;
+    padding: 1.5rem 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.plan-prof p:not(:first-child){
+    color: var(--veryLightGrayishBlue);
+    border-bottom: 1px solid var(--LightGrayishBlue);
+    padding-bottom: 1rem;
+    font-size: .8rem;
+}
+.plan-prof p:first-child{
+    color: var(--veryLightGrayishBlue);
+    font-size: .8rem;
+    margin: 0;
+    margin-bottom: .5rem;
+}
+.plan-prof h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    color: var(--veryLightGrayishBlue);
+    border-bottom: 1px solid var(--LightGrayishBlue);
+}
+.plan-prof button{
+    margin-top:.5rem;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color: hsl(237, 63%, 64%);
+    border: none;
+    padding: .6rem 0;
+    font-size: .6rem;
+    letter-spacing: 1px;
+    background-color:var(--veryLightGrayishBlue);
+}
+.plan-prof button:hover{
+    cursor: pointer;
+    background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border: 1px solid var(--veryLightGrayishBlue);
+    color: var(--veryLightGrayishBlue);
+}
+
+.plan button:hover{
+    cursor: pointer;
+    background: var(--veryLightGrayishBlue);
+    border: 1px solid var(--grayishBlue);
+    color: hsl(237, 63%, 64%);
+}
+.duration-button:hover{
+    cursor: pointer;
+    opacity: .5;
+}
+.node-start{
+    justify-content: start;
+}
+
+@media (min-width:1100px){
+    body{
+        background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+        background-size: 25%, 25%;
+        background-position: top right, bottom left;
+        height:100dvh;
+    }
+    main{
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    h1{
+        margin-bottom: 2.5rem;
+    }
+    .plan{
+        height: 335px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .plan-prof{
+        height: 370px;
+        padding-top: 2.5rem;
+    }
+
+}
